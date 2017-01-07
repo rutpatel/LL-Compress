@@ -1,6 +1,6 @@
 # LOSSLESS DATA COMPRESSION
 
--Implemented Huffmans' Greedy Algorithm
+-Implemented Huffman's Algorithm
 
 - Normal Space saving ~ 45% with an average compresion ratio of ~1.60
 
