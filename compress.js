@@ -38,10 +38,9 @@ else if(whatToDo == 'D' || whatToDo == 'd'){
 }
 
 
-//formNodeStack(content, nodeStack);
- //compression(tree);
 
 //<-------Structures---------->
+
 function Node(char, freq){
 	this.char = char;
 	this.freq = freq;
@@ -54,6 +53,7 @@ function charInfo(char, freq){
 	this.char = char;
 	this.freq = freq; 
 }
+
 //<-------structures End---->
 
 
@@ -62,7 +62,7 @@ function charExists(character, nodeStack){
 	var len = nodeStack.length;
 	for(var k = 0; k < len; k++){
 		if(nodeStack[k].char == character){
-			nodeStack[k].freq++; //inrease the frequence by 1 
+			nodeStack[k].freq++;  
 			freqTable[k].freq++;
 			return true;
 		}
@@ -71,6 +71,7 @@ function charExists(character, nodeStack){
 }
 
 
+// creates a Stack of nodes
 
 function formNodeStack(content, nodeStack){
 	var count = content.length;
@@ -96,6 +97,7 @@ function formNodeStack(content, nodeStack){
 
 
 function subTree(smallNodeOne, smallNodeTwo){
+	
 	var char = smallNodeOne.char + smallNodeTwo.char; 
 	//merging the characters to make efficient encoding later
 	var freq = smallNodeOne.freq + smallNodeTwo.freq;
@@ -116,8 +118,8 @@ function makeHuffmanTree(nodeStack){
 	}
 	else{ //if the length is only 1, then we have our tree at nodeStack[0]
 
-		var smallNodeOne = nodeStack.pop(); 
-		var smallNodeTwo = nodeStack.pop(); 
+		var smallNodeOne = nodeStack.pop(); //pops last node from the stack
+		var smallNodeTwo = nodeStack.pop(); //pops last second node from stack
 
 		var subTreeNode = subTree(smallNodeOne, smallNodeTwo);
 		nodeStack.push(subTreeNode);
