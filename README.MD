@@ -1,6 +1,6 @@
 # LOSSLESS DATA COMPRESSION
 
--Implemented Huffman's Algorithm
+A Data Compression software
 
 - Normal Space saving ~ 45% with an average compresion ratio of ~1.60
 
